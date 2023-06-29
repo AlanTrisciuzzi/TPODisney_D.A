@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "383183267379",
+    "project_id": "tpoapidisney",
+    "storage_bucket": "tpoapidisney.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:383183267379:android:1ca2886fe1de84e0742546",
+        "android_client_info": {
+          "package_name": "com.example.tpodisney"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "383183267379-vk8g81oq5toghcogqbsa0g9emvedajnt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.tpodisney",
+            "certificate_hash": "9640cab49c191d932b03418229ba09325fe0720a"
+          }
+        },
+        {
+          "client_id": "383183267379-i3e6775k1esb57i9sqltgp86bhfcmktj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAO4QGpuKaNA8QHJbZqFZhJUwp7XnYccxM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "383183267379-14ipun7rg2db4lubcfgo4l19s70969jd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
