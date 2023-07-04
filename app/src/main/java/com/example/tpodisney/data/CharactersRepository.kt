@@ -8,4 +8,7 @@ class CharactersRepository {
     suspend fun getCharacters(name : String) : ArrayList<Character> {
         return charactersDS.getCharacters(name)
     }
+
+
+
 }

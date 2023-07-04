@@ -28,16 +28,17 @@ class LoginActivity : AppCompatActivity(){
 
 
         val googleSignInOptions = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_GAMES_SIGN_IN)
-            .requestIdToken(R.string.default_web_client_id)
+            .requestIdToken(getString(R.string.default_web_client_id))
             .requestEmail()
             .build()
+
         googleSingInCliente = GoogleSignIn.getClient(this, googleSignInOptions)
         firebaseAuth = FirebaseAuth.getInstance()
         buttonLogin = findViewById(R.id.btnLogin)
 
         buttonLogin.setOnClickListener{
             val latest = googleSingInCliente.signInIntent
-            startActivityForResult(intent, 100)
+            startActivityForResult(latest, 100)
         }
 
 

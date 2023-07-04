@@ -8,7 +8,7 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/disney_wordmark_svg"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.TPODisney"
@@ -18,7 +18,9 @@
             android:name=".ui.LoginActivity"
             android:exported="false"
             android:label="@string/title_activity_login"
-            android:theme="@style/Theme.TPODisney" />
+            android:theme="@style/Theme.TPODisney.NoActionBar" >
+
+        </activity>
         <activity
             android:name=".ui.SplashActivity"
             android:exported="true"

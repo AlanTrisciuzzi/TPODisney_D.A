@@ -23,7 +23,7 @@ class CharactersAdapter : RecyclerView.Adapter<CharacterViewHolder>(){
 
     override fun onBindViewHolder(holder: CharacterViewHolder, position: Int) {
         holder.name.text = items[position].name
-        holder.url.text = items[position].url
+
     }
 
     fun Update(lista: MutableList<Character>){
