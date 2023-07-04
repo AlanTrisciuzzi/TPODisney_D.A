@@ -6,9 +6,6 @@
     android:background="@drawable/fondo_degradado"
     android:layout_height="match_parent">
 
-
-
-
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="124dp"
@@ -35,40 +32,68 @@
         app:srcCompat="@drawable/disney_wordmark_svg" />
 
     <androidx.cardview.widget.CardView
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/colordetalle"
+        android:layout_width="309dp"
+        android:layout_height="568dp"
         android:layout_marginStart="1dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="632dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView7"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <LinearLayout
-        android:layout_width="257dp"
-        android:layout_height="567dp"
-        tools:layout_editor_absoluteX="77dp"
-        tools:layout_editor_absoluteY="191dp" />
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="232dp"
-        android:layout_height="233dp"
-        android:layout_marginStart="89dp"
-        android:layout_marginTop="138dp"
-        android:layout_marginEnd="90dp"
-        android:layout_marginBottom="369dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView7"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/osodisney" />
+        app:cardCornerRadius="30dp"
+        >
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="77dp"
+            tools:layout_editor_absoluteY="191dp"
+            >
+
+            <ImageView
+                android:id="@+id/imgPersonaje"
+                android:layout_width="262dp"
+                android:layout_height="233dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView7"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/osodisney" />
+        </LinearLayout>
+
+
+
+
+
+
+    </androidx.cardview.widget.CardView>
+    <ImageView
+        android:id="@+id/btnHome"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="106dp"
+        android:layout_marginEnd="88dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnFavoritos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/_131257" />
+
+    <ImageView
+        android:id="@+id/btnFavoritos"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="106dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnHome"
+        app:srcCompat="@drawable/_0797565" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

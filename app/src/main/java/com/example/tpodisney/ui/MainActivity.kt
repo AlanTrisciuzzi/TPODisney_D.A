@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var rvCharacter: RecyclerView
     private lateinit var adapter: CharactersAdapter
     private lateinit var firebaseAuth: FirebaseAuth
+    //private lateinit var
 
 
 
