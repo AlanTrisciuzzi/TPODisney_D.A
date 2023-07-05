@@ -47,7 +47,7 @@
                 android:layout_toLeftOf="@id/imageView10"
                 >
                 <TextView
-                    android:id="@+id/lblname"
+                    android:id="@+id/txtname"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="TextView"

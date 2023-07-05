@@ -11,6 +11,7 @@
 
     <color name="colorUno">#0094FF</color>
     <color name="colorDos">#0073C6</color>
+    <color name="backgroundText">#210AB0</color>
 
 
 </resources>

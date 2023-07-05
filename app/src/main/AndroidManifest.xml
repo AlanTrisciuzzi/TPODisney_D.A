@@ -36,6 +36,12 @@
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.TPODisney.NoActionBar"/>
+
+        <activity
+            android:name=".ui.CharacterDetailActivity"
+            android:label="Character Detail"
+            android:theme="@style/Theme.TPODisney.NoActionBar" />
+
     </application>
 
 </manifest>

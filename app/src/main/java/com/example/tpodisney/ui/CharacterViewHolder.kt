@@ -7,7 +7,7 @@ import com.example.tpodisney.R
 
 
 class CharacterViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-    val name: TextView = itemView.findViewById(R.id.lblname)
+    val name: TextView = itemView.findViewById(R.id.txtname)
 
 
 }
