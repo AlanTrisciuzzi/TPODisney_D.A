@@ -20,24 +20,9 @@ class CharactersDataSource {
 
         Log.d(_TAG, "La api paso por retrofit")
 
-        var result = api.getCharacters(name).execute()
+        val result = api.getCharacters(name).execute()
 
         return if (result.isSuccessful){
-
-            /*
-            val db = FirebaseFirestore.getInstance()
-
-            db.collection("albums").document("id").set(
-                hashMapOf(
-                    "name" to "contenido variable",
-                    "email" to "contenido variable 2"
-                    )
-            )
-
-            db.collection("universities") .document("id").get().addOnSuccessListener {
-                var nombre = it.get("name")
-            }
-            */
 
 
             Log.d(_TAG, "Resultado Exitoso")

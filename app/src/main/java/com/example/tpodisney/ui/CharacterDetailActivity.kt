@@ -1,13 +1,17 @@
 package com.example.tpodisney.ui
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.example.tpodisney.R
+import com.example.tpodisney.model.Character
+import com.google.firebase.firestore.FirebaseFirestore
 
 class CharacterDetailActivity : AppCompatActivity() {
 
@@ -18,15 +22,7 @@ class CharacterDetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.character_detail)
-
-        // Boton vuelve al Home
-        /*imgHome = findViewById(R.id.btnHome)
-        imgHome.setOnClickListener{
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-        }*/
-
-
+        // bindView()
 
         // OBTIENE LOS DATOS DE LA ANTERIOR ACTIVIDAD CHARACTER ADAPTER
         val nombre = intent.getStringExtra("nombre")
@@ -38,6 +34,8 @@ class CharacterDetailActivity : AppCompatActivity() {
         val parkAttractions = intent.getStringExtra("parkAttractions")
         val allies = intent.getStringExtra("allies")
         val enemies = intent.getStringExtra("enemies")
+        // val fav = intent.getStringExtra("fav")
+
 
 
         // CAPTURA LOS VALORES PARA LUEGO UTILIZARLOS
@@ -50,6 +48,8 @@ class CharacterDetailActivity : AppCompatActivity() {
         val txtParkAttractions = findViewById<TextView>(R.id.txtParkAttractions)
         val txtAllies = findViewById<TextView>(R.id.txtAllies)
         val txtEnemies = findViewById<TextView>(R.id.txtEnemies)
+        // val favv = findViewById<ImageView>(R.id.imgfav)
+
 
         // ASIGNA A CADA VALOR SU DATO CORRESPONDIENTE
 
@@ -68,12 +68,27 @@ class CharacterDetailActivity : AppCompatActivity() {
         txtAllies.text = allies
         txtEnemies.text = enemies
 
+        /*if (fav.equals("true")){
+            favv.setColorFilter(Color.RED)
+        }*/
+
     }
 
 
+    /*
+    private fun bindView(){
+        var imgHome: ImageView = findViewById(R.id.imgHome)
+        var imgFavorites: ImageView = findViewById(R.id.imgFavoritos)
 
+        imgHome.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
 
+        imgFavorites.setOnClickListener {
+            val intent = Intent(this, FavoritosActivity::class.java)
+            startActivity(intent)
+        }
 
-
-
+    }*/
 }

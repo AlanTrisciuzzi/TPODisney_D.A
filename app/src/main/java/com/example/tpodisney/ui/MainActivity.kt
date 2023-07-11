@@ -1,10 +1,12 @@
 package com.example.tpodisney.ui
 
 import android.content.Intent
+import android.media.Image
 import android.os.Bundle
 import android.util.Log
 import android.widget.AbsListView.MultiChoiceModeListener
 import android.widget.Button
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -18,8 +20,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var rvCharacter: RecyclerView
     private lateinit var adapter: CharactersAdapter
     private lateinit var firebaseAuth: FirebaseAuth
-    private lateinit var homeButton: Button
-    private lateinit var favButton: Button
+
 
 
 
@@ -62,6 +63,12 @@ class MainActivity : AppCompatActivity() {
         rvCharacter.layoutManager = LinearLayoutManager(this)
         adapter = CharactersAdapter()
         rvCharacter.adapter = adapter
+        /*
+        val fav: ImageView = findViewById(R.id.imgFavoritosHome)
+        fav.setOnClickListener {
+            val intent = Intent(this, FavoritosActivity::class.java)
+            startActivity(intent)
+        }*/
     }
 
     private fun bindViewModel(){

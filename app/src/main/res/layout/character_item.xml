@@ -26,13 +26,13 @@
             android:padding="6dp">
 
             <ImageView
-                android:id="@+id/imageView10"
+                android:id="@+id/imgFavRecycler"
                 android:layout_width="21dp"
                 android:layout_height="20dp"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
                 android:layout_gravity="center"
-                app:srcCompat="@drawable/_096225"
+                app:srcCompat="@drawable/corazon_vacio"
                 />
             <LinearLayout
                 android:id="@+id/linearlayout"
@@ -41,10 +41,10 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="4dp"
                 android:layout_marginTop="2dp"
-                android:layout_toStartOf="@id/imageView10"
+                android:layout_toStartOf="@id/imgFavRecycler"
                 android:orientation="vertical"
                 android:layout_marginLeft="4dp"
-                android:layout_toLeftOf="@id/imageView10"
+                android:layout_toLeftOf="@id/imgFavRecycler"
                 >
                 <TextView
                     android:id="@+id/txtname"

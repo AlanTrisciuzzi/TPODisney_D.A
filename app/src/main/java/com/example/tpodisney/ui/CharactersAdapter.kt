@@ -1,9 +1,11 @@
 package com.example.tpodisney.ui
 
 import android.content.Intent
+import android.graphics.Color
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tpodisney.R
 import com.example.tpodisney.model.Character
@@ -26,7 +28,48 @@ class CharactersAdapter : RecyclerView.Adapter<CharacterViewHolder>(){
     override fun onBindViewHolder(holder: CharacterViewHolder, position: Int) {
         holder.name.text = items[position].name
 
-        val db = FirebaseFirestore.getInstance()
+        /*
+        // Base de Datos
+        //val db = FirebaseFirestore.getInstance()
+
+        // Favorito
+        val favv: Any?= null
+        var option: String = "false"
+        db.collection("favoritos").document(items[position].name).get().addOnSuccessListener {
+            val favv= it.get("fav")
+            if (items[position].fav || favv.toString() == "true"){
+                holder.heart.setColorFilter(Color.BLACK)
+                option = "true"
+            } else {
+                holder.heart.clearColorFilter() }
+        }
+
+        // Click en la Corazon Favoritos
+        holder.heart.setOnClickListener {
+            if (items[position].fav || favv.toString() == "true") {
+                holder.heart.clearColorFilter()
+                items[position].fav = false
+                db.collection("favoritos").document(items[position].name).delete()
+            } else {
+                holder.heart.setColorFilter(Color.BLACK)
+                items[position].fav = true
+                db.collection("favoritos").document(items[position].name).set(
+                    hashMapOf(
+                        "name" to items[position].name,
+                        "films" to items[position].films,
+                        "images" to items[position].imageUrl,
+                        "shortFilms" to items[position].shortFilms,
+                        "tvShows" to items[position].tvShows,
+                        "videoGames" to items[position].videoGames,
+                        "parkAttractions" to items[position].parkAttractions,
+                        "allies" to items[position].allies,
+                        "enemies" to items[position].enemies,
+                        "fav" to items[position].fav
+                    )
+                )
+            }
+      }*/
+
 
 
 
@@ -42,6 +85,8 @@ class CharactersAdapter : RecyclerView.Adapter<CharacterViewHolder>(){
                 val parkAttractions = items[position].parkAttractions.toString()
                 val allies = items[position].allies.toString()
                 val enemies = items[position].enemies.toString()
+                //val fav = option
+
 
                 // Inicio de la otra activity
                 val character = items[position]
@@ -56,7 +101,7 @@ class CharactersAdapter : RecyclerView.Adapter<CharacterViewHolder>(){
                 intent.putExtra("parkAttractions", "Park Attractions: ${if (character.parkAttractions.isEmpty()) "None" else character.parkAttractions.take(1).joinToString(", ") { it ?: "None" }}")
                 intent.putExtra("allies", "Allies: ${if (character.allies.isEmpty()) "None" else character.allies.take(1).joinToString(", ") { it ?: "None" }}")
                 intent.putExtra("enemies", "Enemies: ${if (character.enemies.isEmpty()) "None" else character.enemies.take(1).joinToString(", ") { it ?: "None" }}")
-
+                // intent.putExtra("fav", fav)
                 holder.itemView.context.startActivity(intent)
             } catch (e: Exception) {
                 Log.e("API-DEMO", "Error al iniciar la otra activity: ${e.message}")

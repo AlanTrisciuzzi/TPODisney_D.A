@@ -46,26 +46,26 @@
 
 
     <ImageView
-        android:id="@+id/btnHome"
+        android:id="@+id/imgHomeMain"
         android:layout_width="50dp"
         android:layout_height="40dp"
         android:layout_marginStart="106dp"
         android:layout_marginEnd="88dp"
         android:layout_marginBottom="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnFavoritos"
+        app:layout_constraintEnd_toStartOf="@+id/imgFavoritosHome"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/_131257" />
 
     <ImageView
-        android:id="@+id/btnFavoritos"
+        android:id="@+id/imgFavoritosHome"
         android:layout_width="50dp"
         android:layout_height="40dp"
         android:layout_marginEnd="106dp"
         android:layout_marginBottom="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnHome"
-        app:srcCompat="@drawable/_0797565" />
+        app:layout_constraintStart_toEndOf="@+id/imgHomeMain"
+        app:srcCompat="@drawable/corazon_lleno" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
