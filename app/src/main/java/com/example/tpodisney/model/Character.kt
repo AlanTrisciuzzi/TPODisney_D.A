@@ -15,5 +15,6 @@ data class Character (
     val videoGames : ArrayList<String>,
     val parkAttractions : ArrayList<String>,
     val allies : ArrayList<String>,
-    val enemies : ArrayList<String>
+    val enemies : ArrayList<String>,
+    var fav : Boolean
         )

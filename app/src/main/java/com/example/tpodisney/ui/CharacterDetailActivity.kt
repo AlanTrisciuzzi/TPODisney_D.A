@@ -22,7 +22,7 @@ class CharacterDetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.character_detail)
-        // bindView()
+        bindView()
 
         // OBTIENE LOS DATOS DE LA ANTERIOR ACTIVIDAD CHARACTER ADAPTER
         val nombre = intent.getStringExtra("nombre")
@@ -34,7 +34,7 @@ class CharacterDetailActivity : AppCompatActivity() {
         val parkAttractions = intent.getStringExtra("parkAttractions")
         val allies = intent.getStringExtra("allies")
         val enemies = intent.getStringExtra("enemies")
-        // val fav = intent.getStringExtra("fav")
+        val fav = intent.getStringExtra("fav")
 
 
 
@@ -48,7 +48,7 @@ class CharacterDetailActivity : AppCompatActivity() {
         val txtParkAttractions = findViewById<TextView>(R.id.txtParkAttractions)
         val txtAllies = findViewById<TextView>(R.id.txtAllies)
         val txtEnemies = findViewById<TextView>(R.id.txtEnemies)
-        // val favv = findViewById<ImageView>(R.id.imgfav)
+        val favv = findViewById<ImageView>(R.id.imgfav)
 
 
         // ASIGNA A CADA VALOR SU DATO CORRESPONDIENTE
@@ -68,14 +68,12 @@ class CharacterDetailActivity : AppCompatActivity() {
         txtAllies.text = allies
         txtEnemies.text = enemies
 
-        /*if (fav.equals("true")){
+        if (fav.equals("true")){
             favv.setColorFilter(Color.RED)
-        }*/
+        }
 
     }
 
-
-    /*
     private fun bindView(){
         var imgHome: ImageView = findViewById(R.id.imgHome)
         var imgFavorites: ImageView = findViewById(R.id.imgFavoritos)
@@ -90,5 +88,5 @@ class CharacterDetailActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-    }*/
+    }
 }

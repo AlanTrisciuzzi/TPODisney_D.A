@@ -63,12 +63,12 @@ class MainActivity : AppCompatActivity() {
         rvCharacter.layoutManager = LinearLayoutManager(this)
         adapter = CharactersAdapter()
         rvCharacter.adapter = adapter
-        /*
+
         val fav: ImageView = findViewById(R.id.imgFavoritosHome)
         fav.setOnClickListener {
             val intent = Intent(this, FavoritosActivity::class.java)
             startActivity(intent)
-        }*/
+        }
     }
 
     private fun bindViewModel(){

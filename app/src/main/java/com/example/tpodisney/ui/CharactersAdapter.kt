@@ -28,9 +28,8 @@ class CharactersAdapter : RecyclerView.Adapter<CharacterViewHolder>(){
     override fun onBindViewHolder(holder: CharacterViewHolder, position: Int) {
         holder.name.text = items[position].name
 
-        /*
         // Base de Datos
-        //val db = FirebaseFirestore.getInstance()
+        val db = FirebaseFirestore.getInstance()
 
         // Favorito
         val favv: Any?= null
@@ -68,7 +67,7 @@ class CharactersAdapter : RecyclerView.Adapter<CharacterViewHolder>(){
                     )
                 )
             }
-      }*/
+      }
 
 
 
@@ -85,7 +84,7 @@ class CharactersAdapter : RecyclerView.Adapter<CharacterViewHolder>(){
                 val parkAttractions = items[position].parkAttractions.toString()
                 val allies = items[position].allies.toString()
                 val enemies = items[position].enemies.toString()
-                //val fav = option
+                val fav = option
 
 
                 // Inicio de la otra activity
@@ -101,15 +100,13 @@ class CharactersAdapter : RecyclerView.Adapter<CharacterViewHolder>(){
                 intent.putExtra("parkAttractions", "Park Attractions: ${if (character.parkAttractions.isEmpty()) "None" else character.parkAttractions.take(1).joinToString(", ") { it ?: "None" }}")
                 intent.putExtra("allies", "Allies: ${if (character.allies.isEmpty()) "None" else character.allies.take(1).joinToString(", ") { it ?: "None" }}")
                 intent.putExtra("enemies", "Enemies: ${if (character.enemies.isEmpty()) "None" else character.enemies.take(1).joinToString(", ") { it ?: "None" }}")
-                // intent.putExtra("fav", fav)
+                intent.putExtra("fav", fav)
                 holder.itemView.context.startActivity(intent)
             } catch (e: Exception) {
                 Log.e("API-DEMO", "Error al iniciar la otra activity: ${e.message}")
             }
         }
     }
-
-
 
 
     fun Update(lista: MutableList<Character>){
