@@ -92,14 +92,14 @@ class CharactersAdapter : RecyclerView.Adapter<CharacterViewHolder>(){
 
                 val intent = Intent(holder.itemView.context, CharacterDetailActivity::class.java)
                 intent.putExtra("nombre", "Nombre: ${character.name ?: "None"}")
-                intent.putExtra("fill", "Fill: ${if (character.films.isEmpty()) "None" else character.films.take(2).joinToString(", ") { it ?: "None" }}")
                 intent.putExtra("imagen", character.imageUrl)
-                intent.putExtra("shortFilms", "Short Films: ${if (character.shortFilms.isEmpty()) "None" else character.shortFilms.take(1).joinToString(", ") { it ?: "None" }}")
-                intent.putExtra("tvshows", "TV Shows: ${if (character.tvShows.isEmpty()) "None" else character.tvShows.take(1).joinToString(", ") { it ?: "None" }}")
-                intent.putExtra("videogames", "Video Games: ${if (character.videoGames.isEmpty()) "None" else character.videoGames.take(1).joinToString(", ") { it ?: "None" }}")
-                intent.putExtra("parkAttractions", "Park Attractions: ${if (character.parkAttractions.isEmpty()) "None" else character.parkAttractions.take(1).joinToString(", ") { it ?: "None" }}")
-                intent.putExtra("allies", "Allies: ${if (character.allies.isEmpty()) "None" else character.allies.take(1).joinToString(", ") { it ?: "None" }}")
-                intent.putExtra("enemies", "Enemies: ${if (character.enemies.isEmpty()) "None" else character.enemies.take(1).joinToString(", ") { it ?: "None" }}")
+                intent.putExtra("fill", "Fill: ${items[position].films.toList().joinToString(", ")}")
+                intent.putExtra("shortFilms", "Short Films: ${if (character.shortFilms.isEmpty()) "None" else character.shortFilms.toList().take(1).joinToString(", ") { it.toString() ?: "None" }}")
+                intent.putExtra("tvshows", "TV Shows: ${if (character.tvShows.isEmpty()) "None" else character.tvShows.toList().take(1).joinToString(", ") { it.toString() ?: "None" }}")
+                intent.putExtra("videogames", "Video Games: ${if (character.videoGames.isEmpty()) "None" else character.videoGames.toList().take(1).joinToString(", ") { it.toString() ?: "None" }}")
+                intent.putExtra("parkAttractions", "Park Attractions: ${if (character.parkAttractions.isEmpty()) "None" else character.parkAttractions.toList().take(1).joinToString(", ") { it.toString() ?: "None" }}")
+                intent.putExtra("allies", "Allies: ${if (character.allies.isEmpty()) "None" else character.allies.toList().take(1).joinToString(", ") { it.toString() ?: "None" }}")
+                intent.putExtra("enemies", "Enemies: ${if (character.enemies.isEmpty()) "None" else character.enemies.toList().take(1).joinToString(", ") { it.toString() ?: "None" }}")
                 intent.putExtra("fav", fav)
                 holder.itemView.context.startActivity(intent)
             } catch (e: Exception) {
@@ -108,10 +108,11 @@ class CharactersAdapter : RecyclerView.Adapter<CharacterViewHolder>(){
         }
     }
 
-
     fun Update(lista: MutableList<Character>){
         items = lista
         this.notifyDataSetChanged()
     }
 
 }
+
+

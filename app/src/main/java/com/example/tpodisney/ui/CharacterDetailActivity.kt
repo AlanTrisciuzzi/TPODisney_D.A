@@ -69,14 +69,14 @@ class CharacterDetailActivity : AppCompatActivity() {
         txtEnemies.text = enemies
 
         if (fav.equals("true")){
-            favv.setColorFilter(Color.RED)
+            favv.setColorFilter(Color.BLACK)
         }
 
     }
 
     private fun bindView(){
-        var imgHome: ImageView = findViewById(R.id.imgHome)
-        var imgFavorites: ImageView = findViewById(R.id.imgFavoritos)
+        val imgHome: ImageView = findViewById(R.id.imgHome)
+        val imgFavorites: ImageView = findViewById(R.id.imgFavoritos)
 
         imgHome.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)

@@ -9,18 +9,31 @@
     android:layout_height="match_parent"
     android:background="@drawable/fondo_degradado">
 
+    <SearchView
+        android:id="@+id/search"
+        android:layout_width="303dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="54dp"
+        android:background="@color/colorsearch"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvCharacters"
-        android:layout_width="409dp"
-        android:layout_height="543dp"
+        android:layout_width="405dp"
+        android:layout_height="461dp"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="29dp"
+        android:layout_marginTop="34dp"
         android:layout_marginEnd="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+        app:layout_constraintTop_toBottomOf="@+id/search" />
 
 
     <ImageView
